@@ -27,7 +27,7 @@ export class EmailService {
   }
 
   getHTML({ remitant, email, message }: Email) {
-    return `<h3>${remitant} ${'<' + email + '>'}</h3>
+    return `<h3>${remitant} ${'(' + email + ')'}</h3>
     <p>${message}</p>`;
   }
 }
