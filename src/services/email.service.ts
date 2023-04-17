@@ -16,14 +16,18 @@ export class EmailService {
     try {
       await transport.sendMail({
         from: '"Jhoan Burbano 🫧" <no-reply@architects.com>',
-        to: email.email,
+        to: process.env.EMAIL_PERSONAL,
         subject: email.subject,
-        text: email.message,
-        html: email.html,
+        html: this.getHTML(email),
       });
       return { message: 'The email was send successfully' };
     } catch (error) {
       return { message: error };
     }
+  }
+
+  getHTML({ remitant, email, message }: Email) {
+    return `<h3>${remitant} ${'<' + email + '>'}</h3>
+    <p>${message}</p>`;
   }
 }
