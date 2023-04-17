@@ -18,8 +18,7 @@
     "rewrites": [
       {
         "source": "/(.*)",
-        "destination": "src/main.ts",
-        "continue": true
+        "destination": "src/main.ts"
       }
     ]
   }
