@@ -15,10 +15,10 @@
         ]
       }
     ],
-    "routes": [
+    "rewrites": [
       {
-        "src": "/(.*)",
-        "dest": "/api/$1.js",
+        "source": "/(.*)",
+        "destination": "src/main.ts",
         "continue": true
       }
     ]
