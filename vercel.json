@@ -21,6 +21,5 @@
         "dest": "/api/$1.js",
         "continue": true
       }
-    ],
-    "securityHeaders": false
+    ]
   }
